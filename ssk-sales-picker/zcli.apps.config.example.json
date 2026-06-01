@@ -1,0 +1,7 @@
+{
+  "parameters": {
+    "gasUrl": "https://script.google.com/macros/s/xxxxxxxxxxxxxxxx/exec",
+    "sharedSecret": "production-secret-set-in-zendesk",
+    "devSharedSecret": "local-dev-secret"
+  }
+}

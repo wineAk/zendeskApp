@@ -1,0 +1,8 @@
+{
+  "app": {
+    "name": "Sales Picker",
+    "short_description": "Sales情報を検索してチケットのカスタムフィールドへ反映します。",
+    "long_description": "GAS Webアプリ経由でSales情報を検索し、選択した顧客・案件情報をZendeskチケットのカスタムフィールドへ反映します。",
+    "installation_instructions": "gasUrl にGAS Webアプリの /exec URLを設定し、sharedSecret にはGAS Script Propertiesの ZAF_SHARED_SECRET と同じ値を設定してください。"
+  }
+}

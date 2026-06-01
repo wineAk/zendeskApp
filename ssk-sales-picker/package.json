@@ -1,0 +1,16 @@
+{
+  "name": "ssk-sales-picker",
+  "version": "1.0.1",
+  "private": true,
+  "description": "Zendesk ZAF app for picking Sales data from GAS and setting ticket custom fields.",
+  "scripts": {
+    "server": "zcli apps:server",
+    "validate": "zcli apps:validate",
+    "package": "zcli apps:package",
+    "create": "zcli apps:create",
+    "update": "zcli apps:update"
+  },
+  "devDependencies": {
+    "@zendesk/zcli": "latest"
+  }
+}
