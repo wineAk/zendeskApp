@@ -92,10 +92,24 @@ body {
   margin-bottom: 16px;
 }
 
+.app__header-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
 .app__title {
-  margin: 0 0 4px;
+  margin: 0;
   font-size: 16px;
   font-weight: 700;
+}
+
+.app__version {
+  color: var(--color-muted);
+  font-size: 11px;
+  white-space: nowrap;
 }
 
 .app__description {

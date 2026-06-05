@@ -57,6 +57,7 @@ const state = {
 };
 
 const elements = {
+  appVersion: getElement('app-version'),
   fetchSalesButton: getElement('fetch-sales-button'),
   backToSearchButton: getElement('back-to-search-button'),
   statusMessage: getElement('status-message'),
@@ -91,9 +92,27 @@ function getElement(id) {
 const init = async () => {
   initColorScheme();
   bindEvents();
+  renderAppVersion();
   showView('search');
   observeAppResize();
   requestAppResize();
+};
+
+/**
+ * manifest.jsonのバージョンをヘッダーへ表示する。
+ * @return {Promise<void>}
+ */
+const renderAppVersion = async () => {
+  try {
+    const metadata = await client.metadata();
+    const version = metadata.version;
+
+    if (version) {
+      elements.appVersion.textContent = `v${version}`;
+    }
+  } catch (error) {
+    console.warn('app version get failed:', error);
+  }
 };
 
 /**
