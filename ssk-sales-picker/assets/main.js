@@ -6,8 +6,10 @@ const CONFIG = {
   maxAppHeight: 520,
 };
 
-const GAS_ACTION = {
-  searchSales: 'searchSales',
+const REQUEST_META = {
+  source: 'zendesk_app',
+  type: 'sales',
+  event: 'search',
 };
 
 const TEMPLATE_TOKEN = {
@@ -243,7 +245,7 @@ const createSalesRequestOptions = (settings, query) => {
  */
 const createSalesRequestBody = (settings, query, useSecureSettings) => {
   return {
-    action: GAS_ACTION.searchSales,
+    meta: REQUEST_META,
     [getSharedSecretRequestKey()]: getRequestSecret(settings, useSecureSettings),
     ...createSalesSearchPayload(query),
   };
