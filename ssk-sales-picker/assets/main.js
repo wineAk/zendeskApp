@@ -27,6 +27,7 @@ const SALES_FIELD = {
 };
 
 const ZENDESK_CUSTOM_FIELD = {
+  contactPerson: 'ticket.customField:custom_field_18440197352217',
   companyName: 'ticket.customField:custom_field_18440244277657',
   registrationNumber: 'ticket.customField:custom_field_38116312157337',
   directLink: 'ticket.customField:custom_field_38116294632345',
@@ -607,6 +608,8 @@ const setSalesCustomFields = async item => {
       getSalesValue(item, salesKey),
     ])
   );
+
+  values[ZENDESK_CUSTOM_FIELD.contactPerson] = 'ご担当者';
 
   const filteredValues = Object.fromEntries(
     Object.entries(values).filter(([, value]) => value !== '')
